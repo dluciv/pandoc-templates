@@ -12,7 +12,7 @@ $endif$
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage{cmap}
+  \usepackage{mmap}
   \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
   \usepackage[utf8]{inputenc}
 $if(euro)$
@@ -24,7 +24,7 @@ $endif$
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{$if(deffontfeatures)$$deffontfeatures$$else$Ligatures=TeX,Scale=MatchLowercase$endif$}
+  \defaultfontfeatures{$if(defaultfontfeatures)$$defaultfontfeatures$$else$Ligatures=TeX,Scale=MatchLowercase$endif$}
 $if(euro)$
   \newcommand{\euro}{€}
 $endif$
